@@ -1,0 +1,17 @@
+{
+  "name": "agarz-personalizado",
+  "version": "1.0.0",
+  "description": "Agarz personalizado - Juego tipo Agar.io con diseño épico rojo y negro",
+  "main": "game.js",
+  "scripts": {
+    "start": "open index.html"
+  },
+  "keywords": [
+    "agarz",
+    "agar.io",
+    "game",
+    "javascript"
+  ],
+  "author": "abelith-hub",
+  "license": "MIT"
+}

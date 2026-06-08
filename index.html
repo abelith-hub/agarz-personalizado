@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agarz Personalizado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <div class="login-content">
+            <!-- Luna/Sol rojo de fondo -->
+            <div class="red-moon"></div>
+            
+            <!-- Silueta del personaje -->
+            <div class="character-silhouette"></div>
+            
+            <!-- Formulario de login -->
+            <div class="login-form">
+                <h1 class="logo">AGARZ</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="username" 
+                            class="form-input" 
+                            placeholder="Nombre de jugador"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn-login">ENTRAR AL JUEGO</button>
+                </form>
+                <p class="form-info">Únete a la batalla épica</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container" class="game-container" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud" class="hud">
+            <div class="player-info">
+                <span id="player-name"></span>
+                <span id="player-score"></span>
+            </div>
+            <div class="controls-info">
+                Mueve el ratón para moverte | Click para dividirse
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
