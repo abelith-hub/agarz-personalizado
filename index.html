@@ -1,53 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
+    <title>Agarz Personalizado</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agarz Personalizado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="login-container" class="login-container">
-        <div class="login-content">
-            <!-- Luna/Sol rojo de fondo -->
-            <div class="red-moon"></div>
-            
-            <!-- Silueta del personaje -->
-            <div class="character-silhouette"></div>
-            
-            <!-- Formulario de login -->
-            <div class="login-form">
-                <h1 class="logo">AGARZ</h1>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <input 
-                            type="text" 
-                            id="username" 
-                            class="form-input" 
-                            placeholder="Nombre de jugador"
-                            required
-                        >
+    <canvas id="canvas" style="border: 1px solid #333;"></canvas>
+    <div id="overlays" style="display: none;">
+        <div id="login-panel">
+            <div class="login-container">
+                <div class="red-moon"></div>
+                <div class="character-silhouette"></div>
+                <div class="login-form">
+                    <h1 class="logo">AGARZ</h1>
+                    <div style="margin-bottom: 20px;">
+                        <input id="nick" type="text" class="form-input" placeholder="Nombre de jugador" maxlength="15">
                     </div>
-                    <button type="submit" class="btn-login">ENTRAR AL JUEGO</button>
-                </form>
-                <p class="form-info">Únete a la batalla épica</p>
+                    <div style="margin-bottom: 20px;">
+                        <select id="region" class="form-input" style="padding: 10px;">
+                            <option value="1">Región 1</option>
+                            <option value="2">Región 2</option>
+                            <option value="3">Región 3</option>
+                        </select>
+                    </div>
+                    <button id="playBtn" class="btn-login">ENTRAR AL JUEGO</button>
+                    <p class="form-info">Únete a la batalla épica</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="game-container" class="game-container" style="display: none;">
-        <canvas id="gameCanvas"></canvas>
-        <div id="hud" class="hud">
-            <div class="player-info">
-                <span id="player-name"></span>
-                <span id="player-score"></span>
-            </div>
-            <div class="controls-info">
-                Mueve el ratón para moverte | Click para dividirse
-            </div>
+        <div id="chat_textbox">
+            <input type="text" id="chat_input" placeholder="Escribe un mensaje..." style="width: 100%; padding: 10px; border: 1px solid #ff3333; background: #1a1a1a; color: #fff;">
         </div>
     </div>
-
-    <script src="game.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
